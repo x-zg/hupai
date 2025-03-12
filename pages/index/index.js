@@ -5,6 +5,14 @@ Page({
              url: '/pages/room/room'
         });
     },
+    
+    createRoom: function() {
+      // 这里可以添加创建房间的逻辑，例如向服务器发送请求创建房间
+      // 创建成功后再导航到房间页面
+      wx.navigateTo({
+        url: '/pages/room/room'
+      })
+    },
 
     joinRoom: function() {
     // 弹出输入框，让用户输入房间号
