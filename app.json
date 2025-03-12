@@ -1,17 +1,19 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/room/room",
-    "pages/game/game",
-    "pages/result/result"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "棋牌游戏",
-    "navigationBarTextStyle": "black"
-  },
-  "renderer": "webview",
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/room/room",
+        "pages/game/game",
+        "pages/result/result",
+        "pages/createRoom/createRoom",
+        "pages/joinRoom/joinRoom"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "棋牌游戏",
+        "navigationBarTextStyle": "black"
+    },
+    "renderer": "webview",
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }

@@ -1,20 +1,23 @@
 const app = getApp()
 Page({
-  data: {
-    currentPlayer: '',
-    currentCard: null,
-    players: [],
-    gameState: 'waiting' // 'waiting', 'playing', 'result'
-  },
+   data: {
+        currentPlayer: '',
+        currentCard: null,
+        players: [],
+        gameState: 'waiting', // 'waiting', 'playing', 'result'
+        roomId: ''
+    },
   onLoad: function() {
-    const players = app.globalData.players
-    const currentPlayerIndex = app.globalData.currentPlayerIndex
-    this.setData({
-      players: players,
-      currentPlayer: players[currentPlayerIndex],
-      gameState: 'playing'
-    })
-    this.drawCard()
+    const roomId = options.roomId;
+        this.setData({ roomId });
+        const players = app.globalData.players;
+        const currentPlayerIndex = app.globalData.currentPlayerIndex;
+        this.setData({
+            players: players,
+            currentPlayer: players[currentPlayerIndex],
+            gameState: 'playing'
+        });
+        this.drawCard();
   },
   drawCard: function() {
     // 模拟抽牌
