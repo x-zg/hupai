@@ -30,7 +30,11 @@
     "swc": false,
     "disableSWC": true,
     "disableUseStrict": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "urlCheck": true,
+    "request": {
+      "domain": ["http://10.228.84.10:8000"]
+    }
   },
   "condition": {},
   "editorSetting": {

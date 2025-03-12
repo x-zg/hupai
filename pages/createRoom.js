@@ -1,4 +1,5 @@
 const app = getApp();
+app.globalData.serverUrl = 'http://10.228.84.10:8000';
 
 Page({
     data: {
