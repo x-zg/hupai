@@ -4,8 +4,7 @@
         "pages/room/room",
         "pages/game/game",
         "pages/result/result",
-        "pages/createRoom/createRoom",
-        "pages/joinRoom/joinRoom"
+        "pages/roomSelection/roomSelection"
     ],
     "window": {
         "backgroundTextStyle": "light",

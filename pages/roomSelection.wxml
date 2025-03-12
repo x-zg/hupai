@@ -1,0 +1,6 @@
+<view class="container">
+    <button bindtap="createRoom">创建房间</button>
+    <input placeholder="输入房间号" bindinput="onRoomIdInput"/>
+    <input placeholder="输入密码" password bindinput="onPasswordInput"/>
+    <button bindtap="joinRoom">加入房间</button>
+</view>

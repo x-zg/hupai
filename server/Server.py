@@ -4,9 +4,10 @@
 # @Site    :
 # @File    : Server.py
 # @Software: PyCharm
+import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
-import uvicorn
+
 app = FastAPI()
 
 # 存储房间信息，简单模拟，实际生产中需要持久化存储
@@ -41,8 +42,19 @@ async def join_room(request: RoomJoinRequest):
         return {"error": "房间不存在"}
     if room["password"] != password:
         return {"error": "密码错误"}
+    if len(room["players"]) >= 4:
+        return {"error": "房间已满"}
     # 这里可以添加玩家信息到房间的 players 数组中
+    room["players"].append("新玩家")  # 简单示例，实际应传入玩家信息
     return {"message": "加入房间成功"}
 
+# 获取房间玩家数量接口
+@app.get("/roomPlayers/{roomId}")
+async def get_room_players(roomId: str):
+    room = rooms.get(roomId)
+    if not room:
+        return {"error": "房间不存在"}
+    return {"playerCount": len(room["players"])}
+
 if __name__ == '__main__':
-    uvicorn.run("Server:app", host="0.0.0.0", port=8085, reload=True)
+    uvicorn.run("Server:app", host="0.0.0.0", port=8000, reload=True)
