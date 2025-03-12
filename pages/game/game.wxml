@@ -1,0 +1,17 @@
+<view class="container">
+  <text class="title">游戏进行中</text>
+  <view class="current-player">
+    <text>当前玩家：{{currentPlayer}}</text>
+  </view>
+  <view class="card" wx:if="{{currentCard}}">
+    <text class="card-suit">{{currentCard.suit}}</text>
+    <text class="card-number">{{currentCard.number}}</text>
+    <text class="card-suit">{{currentCard.suit}}</text>
+    <view class="card-bottom">
+      <text class="card-bottom-suit">{{currentCard.suit}}</text>
+      <text class="card-bottom-number">{{currentCard.number}}</text>
+    </view>
+  </view>
+  <button bindtap="playCard" wx:if="{{gameState === 'playing'}}">出牌</button>
+  <button bindtap="restartGame" wx:if="{{gameState === 'result'}}">重新开始</button>
+</view>

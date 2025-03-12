@@ -1,0 +1,53 @@
+.container {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 50rpx;
+}
+.current-player {
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
+}
+.card {
+  width: 400rpx;
+  height: 600rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+.card-suit {
+  font-size: 10rpx;
+  margin-bottom: 20rpx;
+}
+.card-number {
+  font-size: 240rpx;
+  font-weight: bold;
+}
+.card-bottom {
+  position: absolute;
+  bottom: 40rpx;
+  left: 40rpx;
+  right: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.card-bottom-suit, .card-bottom-number {
+  font-size: 60rpx;
+  transform: rotate(180deg);
+}
+button {
+  background-color: #1aad19;
+  color: #ffffff;
+  padding: 20rpx 40rpx;
+  border-radius: 10rpx;
+}

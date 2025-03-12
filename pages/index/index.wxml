@@ -1,0 +1,5 @@
+<view class="container">
+  <text class="title">欢迎来到棋牌游戏</text>
+  <text class="description">这是一个简单有趣的棋牌游戏，让我们一起来玩吧！</text>
+  <button bindtap="startGame">开始游戏</button>
+</view>
