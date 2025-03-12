@@ -3,7 +3,7 @@ Page({
     data: {
         players: [],
         currentPlayerIndex: 0,
-        roomId: ''
+        roomNumber: '' // 新增房间号属性
     },
     onLoad: function (options) {
         const roomId = options.roomId;
@@ -11,7 +11,8 @@ Page({
         this.checkRoomPlayers();
         this.setData({
             players: app.globalData.players,
-            currentPlayerIndex: app.globalData.currentPlayerIndex
+            currentPlayerIndex: app.globalData.currentPlayerIndex,
+            roomNumber: options.roomNumber // 获取传递过来的房间号
         });
     },
     checkRoomPlayers: function () {
@@ -50,7 +51,7 @@ Page({
     },
     startGame: function () {
         wx.navigateTo({
-            url: `/pages/game/game?roomId=${this.data.roomId}`
+               url: '/pages/game/game'
         });
     }
 });
