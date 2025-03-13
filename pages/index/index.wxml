@@ -1,6 +1,0 @@
-<view class="container">
-  <text class="title">欢迎来到棋牌游戏</text>
-  <text class="description">这是一个简单有趣的棋牌游戏，让我们一起来玩吧！</text>
-   <button bindtap="createRoom">创建房间</button>
-  <button bindtap="joinRoom">加入房间</button>
-</view>
